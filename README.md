@@ -1,2 +1,929 @@
-# prajapatifinancialservices
-finincial services 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prajapati Investment & Financial Services — Wealth Planning, Sagar MP</title>
+<meta name="description" content="Personalized financial planning, mutual fund distribution, retirement planning and goal-based investing with Harsh Prajapati, Sagar, Madhya Pradesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0A2540;
+    --navy-deep:#061829;
+    --navy-mid:#102D5A;
+    --gold:#B8944F;
+    --gold-bright:#D4AF37;
+    --paper:#F5F7FB;
+    --ink:#16202B;
+    --muted:#6B7686;
+    --sage:#4C6B5B;
+    --line:#E1E5EE;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  ul{margin:0;padding:0;list-style:none;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  :focus-visible{
+    outline:2px solid var(--gold-bright);
+    outline-offset:3px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    background:var(--navy);color:#C7D0DB;
+    font-size:0.8rem;
+  }
+  .topbar-inner{
+    max-width:1120px;margin:0 auto;padding:0 24px;
+    height:40px;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;
+  }
+  .topbar-left{display:flex;gap:22px;}
+  .topbar-left a{text-decoration:none;color:#C7D0DB;display:inline-flex;align-items:center;gap:6px;}
+  .topbar-left a:hover{color:var(--gold-bright);}
+  .topbar-right{display:flex;gap:14px;align-items:center;}
+  .topbar-right a{color:#C7D0DB;display:flex;}
+  .topbar-right a:hover{color:var(--gold-bright);}
+  .topbar-loc{display:inline-flex;align-items:center;gap:6px;}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;
+    max-width:1120px;margin:0 auto;
+    position:relative;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .brand-mark{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--navy);
+    color:var(--gold-bright);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-weight:600;font-size:0.85rem;
+    flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'Fraunces',serif;font-weight:600;font-size:1rem;
+    color:var(--navy);
+    line-height:1.15;
+  }
+  .brand-name span{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:0.62rem;letter-spacing:0.06em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+  nav.links{display:flex;gap:28px;}
+  nav.links a{
+    font-size:0.9rem;text-decoration:none;color:var(--ink);
+    position:relative;padding-bottom:4px;
+  }
+  nav.links a::after{
+    content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);
+    transition:width 0.25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--navy);color:#fff;
+    padding:11px 22px;
+    text-decoration:none;
+    font-size:0.88rem;font-weight:500;
+    border-radius:var(--radius);
+    border:1px solid var(--navy);
+    transition:background 0.2s ease, color 0.2s ease;
+    white-space:nowrap;
+    cursor:pointer;
+  }
+  .btn:hover{background:var(--navy-deep);}
+  .btn-gold{background:var(--gold-bright);border-color:var(--gold-bright);color:var(--navy-deep);font-weight:600;}
+  .btn-gold:hover{background:#c9a02e;}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.35);}
+  .btn-ghost:hover{background:rgba(255,255,255,0.1);}
+  .btn-navy-outline{background:transparent;color:var(--navy);border:1px solid var(--navy);}
+  .btn-navy-outline:hover{background:var(--navy);color:#fff;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);
+    color:#fff;
+    padding:72px 0 0;
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;
+    padding-bottom:40px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,4.2vw,3.2rem);
+    line-height:1.1;
+    color:#fff;
+    margin:18px 0 22px;
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-bright);}
+  .hero p.lede{
+    font-size:1.06rem;
+    color:#C7D0DB;
+    max-width:46ch;
+    margin-bottom:34px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-chart{width:100%;height:auto;}
+  .hero-chart-wrap{padding:20px 0 0;}
+  .chart-path{
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    animation:draw 2.2s cubic-bezier(.4,0,.2,1) forwards 0.3s;
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  .chart-dot{opacity:0;animation:fadein 0.5s ease forwards;}
+  .chart-dot:nth-of-type(1){animation-delay:0.9s;}
+  .chart-dot:nth-of-type(2){animation-delay:1.4s;}
+  .chart-dot:nth-of-type(3){animation-delay:1.9s;}
+  .chart-dot:nth-of-type(4){animation-delay:2.4s;}
+  @keyframes fadein{to{opacity:1;}}
+
+  /* ---------- Sections ---------- */
+  section{padding:80px 0;}
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{font-size:clamp(1.65rem,3vw,2.2rem);margin-top:10px;}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1.02rem;}
+
+  /* Trust bar */
+  .trustbar{background:#fff;border-bottom:1px solid var(--line);padding:36px 0;}
+  .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .trust-row .item{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .trust-row .item span{font-size:0.82rem;font-weight:600;letter-spacing:0.03em;color:var(--navy);text-transform:uppercase;}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;align-items:start;}
+  .about-portrait{
+    aspect-ratio:4/5;
+    background:linear-gradient(160deg,var(--navy),var(--navy-deep));
+    border-radius:var(--radius);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-bright);
+    font-family:'Fraunces',serif;font-size:4.5rem;font-weight:600;
+    position:relative;
+  }
+  .about-portrait small{
+    position:absolute;bottom:20px;left:20px;right:20px;
+    font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;
+    color:#C7D0DB;text-transform:uppercase;
+  }
+  .about-body p{margin-bottom:16px;color:var(--ink);}
+  .facts-strip{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:24px;margin-top:36px;
+    border-top:1px solid var(--line);padding-top:28px;
+  }
+  .facts-strip .fact-num{font-family:'IBM Plex Mono',monospace;font-size:1.4rem;color:var(--navy);font-weight:500;}
+  .facts-strip .fact-label{font-size:0.82rem;color:var(--muted);margin-top:4px;}
+
+  /* Services */
+  .goals-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+  }
+  .goal-card{
+    background:var(--paper);
+    padding:32px 28px;
+    transition:background 0.2s ease;
+  }
+  .goal-card:hover{background:#fff;}
+  .goal-mark{width:34px;height:34px;margin-bottom:20px;}
+  .goal-card h3{font-size:1.05rem;margin-bottom:10px;font-weight:600;}
+  .goal-card p{font-size:0.92rem;color:var(--muted);}
+
+  /* Why choose us */
+  .why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .why-item{background:#fff;padding:26px 22px;display:flex;gap:12px;align-items:flex-start;}
+  .why-item svg{flex-shrink:0;margin-top:2px;}
+  .why-item p{font-size:0.92rem;font-weight:500;}
+
+  /* Process */
+  .process{background:var(--navy);color:#fff;}
+  .process .section-head p{color:#B7C2CF;}
+  .process .eyebrow{color:var(--gold-bright);}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;}
+  .steps::before{content:'';position:absolute;top:22px;left:0;right:0;height:1px;background:rgba(255,255,255,0.16);}
+  .step{position:relative;padding-right:18px;}
+  .step-num{
+    font-family:'IBM Plex Mono',monospace;font-size:0.85rem;
+    width:44px;height:44px;border-radius:50%;
+    background:var(--navy-deep);border:1px solid var(--gold);
+    color:var(--gold-bright);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:22px;position:relative;z-index:1;
+  }
+  .step h3{font-size:0.98rem;color:#fff;margin-bottom:8px;font-weight:600;}
+  .step p{font-size:0.85rem;color:#B7C2CF;}
+
+  /* Calculators */
+  .calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .calc-card{
+    background:var(--navy);color:#fff;
+    border-radius:var(--radius);
+    padding:26px 22px;
+    border:1px solid var(--navy-mid);
+  }
+  .calc-card h3{color:#fff;font-size:1.02rem;margin-bottom:8px;}
+  .calc-card p{color:#B7C2CF;font-size:0.85rem;margin-bottom:16px;}
+  .calc-card .btn{width:100%;justify-content:center;}
+  .calc-panel{
+    display:none;margin-top:18px;padding-top:18px;
+    border-top:1px solid rgba(255,255,255,0.15);
+  }
+  .calc-panel.open{display:block;}
+  .calc-panel label{font-size:0.72rem;color:#B7C2CF;display:block;margin-bottom:4px;margin-top:10px;}
+  .calc-panel input{
+    width:100%;padding:9px 10px;font-size:0.88rem;
+    border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);
+    background:rgba(255,255,255,0.08);color:#fff;
+  }
+  .calc-result{
+    margin-top:14px;padding:12px;background:rgba(212,175,55,0.12);
+    border:1px solid var(--gold);border-radius:var(--radius);
+    font-family:'IBM Plex Mono',monospace;font-size:0.85rem;color:var(--gold-bright);
+  }
+  .calc-note{font-size:0.7rem;color:#8E9AA8;margin-top:14px;}
+
+  /* Insights */
+  .insights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .insight-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform 0.2s ease, box-shadow 0.2s ease;}
+  .insight-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(10,37,64,0.08);}
+  .insight-tag{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);}
+  .insight-card h3{font-size:1.02rem;margin:10px 0;}
+  .insight-card p{font-size:0.88rem;color:var(--muted);}
+  .insight-soon{display:inline-block;margin-top:14px;font-size:0.78rem;color:var(--muted);font-style:italic;}
+
+  /* CTA banner */
+  .cta-banner{background:var(--gold-bright);color:var(--navy-deep);text-align:center;padding:64px 0;}
+  .cta-banner h2{color:var(--navy-deep);font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:14px;}
+  .cta-banner p{color:var(--navy-deep);opacity:0.85;margin-bottom:28px;font-size:1.02rem;}
+  .cta-banner .btn{background:var(--navy);border-color:var(--navy);color:#fff;}
+  .cta-banner .btn:hover{background:var(--navy-deep);}
+
+  /* Contact */
+  .contact{background:#fff;border-top:1px solid var(--line);}
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;}
+  .contact-info dl{display:flex;flex-direction:column;gap:20px;}
+  .contact-info dt{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+  .contact-info dd{margin:0;font-size:1.02rem;}
+  .contact-info a{text-decoration:none;border-bottom:1px solid var(--line);}
+  .contact-info a:hover{border-color:var(--gold);color:var(--gold);}
+  .map-embed{margin-top:24px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);}
+  .map-embed iframe{width:100%;height:220px;border:0;display:block;}
+  form.consult{display:flex;flex-direction:column;gap:16px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  label{font-size:0.8rem;color:var(--muted);margin-bottom:6px;display:block;}
+  input,textarea,select{
+    width:100%;font-family:'Inter',sans-serif;font-size:0.95rem;
+    padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--paper);color:var(--ink);
+  }
+  input:focus,textarea:focus,select:focus{border-color:var(--gold);outline:none;}
+  textarea{resize:vertical;min-height:100px;}
+  .form-note{font-size:0.8rem;color:var(--muted);}
+
+  /* Footer */
+  footer{background:var(--navy-deep);color:#B7C2CF;padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:24px;}
+  .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .footer-col h4{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:#fff;margin-bottom:16px;font-family:'IBM Plex Mono',monospace;font-weight:500;}
+  .footer-col ul{display:flex;flex-direction:column;gap:10px;}
+  .footer-col a{font-size:0.88rem;text-decoration:none;color:#B7C2CF;}
+  .footer-col a:hover{color:var(--gold-bright);}
+  .footer-tagline{font-size:0.85rem;color:#8E9AA8;max-width:32ch;}
+  .disclaimer{font-size:0.78rem;line-height:1.7;color:#8E9AA8;max-width:900px;}
+  .disclaimer strong{color:#B7C2CF;}
+  .copyright{font-size:0.78rem;color:#6B7686;margin-top:20px;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:860px){
+    .topbar-left span.hide-mobile,.topbar-loc{display:none;}
+    nav.links{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;background:#fff;
+      border-bottom:1px solid var(--line);padding:8px 24px 16px;
+    }
+    nav.links.open{display:flex;}
+    nav.links a{padding:12px 0;border-bottom:1px solid var(--line);}
+    nav.links a:last-child{border-bottom:none;}
+    .menu-toggle{display:block;}
+    .nav-cta{display:none;}
+    .hero-inner{grid-template-columns:1fr;}
+    .hero{padding-top:24px;}
+    .trust-row{grid-template-columns:repeat(2,1fr);}
+    .about-grid{grid-template-columns:1fr;}
+    .about-portrait{aspect-ratio:16/9;max-width:280px;}
+    .goals-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:repeat(2,1fr);gap:28px;}
+    .steps::before{display:none;}
+    .calc-grid{grid-template-columns:repeat(2,1fr);}
+    .insights-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    section{padding:56px 0;}
+  }
+  @media (max-width:520px){
+    .goals-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .calc-grid{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+    .facts-strip{grid-template-columns:1fr;gap:16px;}
+    .hero-ctas{flex-direction:column;align-items:stretch;}
+    .footer-grid{grid-template-columns:1fr;}
+    .topbar-inner{justify-content:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <a href="tel:+916264200751">📞 +91 62642 00751</a>
+      <a href="mailto:hrashprajapati99@gmail.com" class="hide-mobile">📧 hrashprajapati99@gmail.com</a>
+      <span class="topbar-loc">📍 Sagar, Madhya Pradesh</span>
+    </div>
+    <div class="topbar-right">
+      <a href="https://linkedin.com/in/hrash-prajapati-7262512b2" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.7c0-1.6-.03-3.65-2.22-3.65-2.23 0-2.57 1.74-2.57 3.54V23h-4V8.5z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">PIFS</span>
+      <span class="brand-name">Prajapati Investment &amp;<br>Financial Services</span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#calculators">Calculators</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold nav-cta" href="tel:+916264200751">Book Consultation</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">Investment &amp; Financial Planning</p>
+      <h1>Helping you build wealth &amp; achieve <em>financial freedom.</em></h1>
+      <p class="lede">Personalized financial planning, mutual fund distribution, retirement planning and portfolio review — tailored to your goals, not generic advice.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="tel:+916264200751">Book Consultation</a>
+        <a class="btn btn-ghost" href="https://wa.me/916264200751" target="_blank" rel="noopener">WhatsApp Now</a>
+      </div>
+    </div>
+    <div class="hero-chart-wrap">
+      <svg class="hero-chart" viewBox="0 0 480 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="0" y1="260" x2="480" y2="260" stroke="rgba(255,255,255,0.12)"/>
+        <line x1="0" y1="180" x2="480" y2="180" stroke="rgba(255,255,255,0.08)"/>
+        <line x1="0" y1="100" x2="480" y2="100" stroke="rgba(255,255,255,0.08)"/>
+        <path class="chart-path" d="M10 250 C 90 240, 130 220, 170 195 S 250 150, 300 120 S 400 40, 470 20"
+              stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <circle class="chart-dot" cx="170" cy="195" r="5" fill="#0A2540" stroke="#D4AF37" stroke-width="2"/>
+        <circle class="chart-dot" cx="300" cy="120" r="5" fill="#0A2540" stroke="#D4AF37" stroke-width="2"/>
+        <circle class="chart-dot" cx="400" cy="40" r="5" fill="#0A2540" stroke="#D4AF37" stroke-width="2"/>
+        <circle class="chart-dot" cx="470" cy="20" r="6" fill="#D4AF37"/>
+        <text x="170" y="215" fill="#C7D0DB" font-family="IBM Plex Mono" font-size="10">Child's Education</text>
+        <text x="270" y="140" fill="#C7D0DB" font-family="IBM Plex Mono" font-size="10">Wealth Creation</text>
+        <text x="330" y="60" fill="#C7D0DB" font-family="IBM Plex Mono" font-size="10">Retirement</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="trustbar">
+  <div class="wrap trust-row">
+    <div class="item">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M14 3 5 7v6c0 6 4 9.5 9 12 5-2.5 9-6 9-12V7l-9-4Z" stroke="#B8944F" stroke-width="1.4"/></svg>
+      <span>NISM Certified</span>
+    </div>
+    <div class="item">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#B8944F" stroke-width="1.4"/><path d="M9 14l3.5 3.5L19 10" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Goal-Based Planning</span>
+    </div>
+    <div class="item">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M5 21V11l9-6 9 6v10" stroke="#B8944F" stroke-width="1.4" stroke-linejoin="round"/><path d="M11 21v-6h6v6" stroke="#B8944F" stroke-width="1.4"/></svg>
+      <span>Personalized Service</span>
+    </div>
+    <div class="item">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M6 14c0-4 4-8 8-8s8 4 8 8-4 8-8 8" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round"/><path d="M6 14l3-3M6 14l3 3" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <span>Client-First Approach</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-portrait">
+      HP
+      <small>Harsh Prajapati · Founder</small>
+    </div>
+    <div class="about-body">
+      <p class="eyebrow">About Harsh</p>
+      <h2 style="margin:12px 0 20px;">Welcome to Prajapati Investment &amp; Financial Services</h2>
+      <p>I help individuals and families build wealth through disciplined financial planning and investment strategies. I am a registered financial advisor, having completed the <strong>NISM Investment Adviser Level 1 and Level 2 certifications</strong>, along with certifications in <strong>mutual fund distribution</strong>, <strong>portfolio management services</strong>, and <strong>commodity derivatives</strong>.</p>
+      <p>Every recommendation starts with understanding where you are today and where you want to be, then mapping mutual funds and investment strategies that fit your timeline, risk appetite, and cash flow.</p>
+      <div class="facts-strip">
+        <div>
+          <div class="fact-num">NISM</div>
+          <div class="fact-label">Investment Adviser Level 1 &amp; 2 certified</div>
+        </div>
+        <div>
+          <div class="fact-num">MF·PMS</div>
+          <div class="fact-label">Certified in mutual funds &amp; portfolio management services</div>
+        </div>
+        <div>
+          <div class="fact-num">Comm.</div>
+          <div class="fact-label">Certified in commodity derivatives</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Services</p>
+      <h2>Plans built around your goals</h2>
+      <p>Every service below starts with a conversation about what you're actually saving and investing for.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0 24px;">
+    <div class="goals-grid">
+      <div class="goal-card">
+        <svg class="goal-mark" viewBox="0 0 34 34" fill="none"><rect x="7" y="9" width="20" height="16" rx="1" stroke="#B8944F" stroke-width="1.4"/><path d="M7 14h20" stroke="#B8944F" stroke-width="1.4"/></svg>
+        <h3>Mutual Fund Distribution</h3>
+        <p>Access to a curated range of mutual funds, matched to your goals rather than sold as one-off products.</p>
+      </div>
+      <div class="goal-card">
+        <svg class="goal-mark" viewBox="0 0 34 34" fill="none"><path d="M17 4c7 3 12 3 12 3v10c0 7-5 11-12 13-7-2-12-6-12-13V7s5 0 12-3Z" stroke="#B8944F" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <h3>Financial Planning</h3>
+        <p>A single, coherent plan tying together your goals, insurance, tax efficiency, and investment strategy.</p>
+      </div>
+      <div class="goal-card">
+        <svg class="goal-mark" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15" stroke="#B8944F" stroke-width="1.4"/><path d="M17 9v8l6 3" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <h3>Retirement Planning</h3>
+        <p>Build a corpus and withdrawal strategy that keeps pace with inflation and your lifestyle after work stops.</p>
+      </div>
+      <div class="goal-card">
+        <svg class="goal-mark" viewBox="0 0 34 34" fill="none"><path d="M6 24 13 16 18 20 28 8" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 8h6v6" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Goal-Based Investing</h3>
+        <p>Long-term, diversified investing designed to compound steadily toward the milestones that matter to you.</p>
+      </div>
+      <div class="goal-card">
+        <svg class="goal-mark" viewBox="0 0 34 34" fill="none"><path d="M8 24c3-8 6-4 9-12 2 5 5 3 9-6" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round"/><circle cx="26" cy="8" r="2" fill="#B8944F"/></svg>
+        <h3>Portfolio Review</h3>
+        <p>A regular, honest look at how your existing investments are performing against your original goals.</p>
+      </div>
+      <div class="goal-card">
+        <svg class="goal-mark" viewBox="0 0 34 34" fill="none"><path d="M9 25V13l8-6 8 6v12" stroke="#B8944F" stroke-width="1.4" stroke-linejoin="round"/><path d="M14 25v-7h6v7" stroke="#B8944F" stroke-width="1.4"/></svg>
+        <h3>Wealth Creation</h3>
+        <p>Building long-term wealth through disciplined, diversified investing rather than chasing short-term returns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>A client-first approach to your money</h2>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0 24px;">
+    <div class="why-grid">
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Personalized Advice</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Transparent Process</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Long-Term Wealth Building</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Goal-Focused Strategies</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Professional Guidance</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Regular Portfolio Review</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Client-Centric Approach</p>
+      </div>
+      <div class="why-item">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#B8944F" stroke-width="1.4"/><path d="M6 10l2.5 2.5L14 7" stroke="#B8944F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Trusted Financial Partner</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How We Work</p>
+      <h2>A five-step process, start to finish</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Discovery Call</h3>
+        <p>A conversation about your income, timeline, and what you're actually planning for.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Financial Analysis</h3>
+        <p>A close look at your current finances, existing investments, and cash flow.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Strategy Creation</h3>
+        <p>A goal-based investment plan matched to your risk appetite and timeline.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Implementation</h3>
+        <p>Set up SIPs or lump-sum investments across a curated set of mutual funds.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <h3>Ongoing Review</h3>
+        <p>Regular check-ins to rebalance the plan as your life and goals evolve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="calculators" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Plan Your Future</p>
+      <h2>Financial Calculators</h2>
+      <p>Quick, indicative estimates to help you think through your numbers — not a substitute for a full plan.</p>
+    </div>
+    <div class="calc-grid">
+
+      <div class="calc-card">
+        <h3>SIP Calculator</h3>
+        <p>Estimate the future value of a monthly SIP investment.</p>
+        <button class="btn btn-gold" onclick="toggleCalc('sip')" type="button">Calculate</button>
+        <div class="calc-panel" id="panel-sip">
+          <label for="sip-amount">Monthly investment (₹)</label>
+          <input id="sip-amount" type="number" value="5000">
+          <label for="sip-return">Expected annual return (%)</label>
+          <input id="sip-return" type="number" value="12">
+          <label for="sip-years">Investment period (years)</label>
+          <input id="sip-years" type="number" value="10">
+          <button class="btn btn-navy-outline" style="margin-top:14px;background:#fff;" onclick="calcSIP()" type="button">Estimate</button>
+          <div class="calc-result" id="result-sip"></div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Retirement Calculator</h3>
+        <p>Estimate the monthly SIP needed to reach your retirement corpus.</p>
+        <button class="btn btn-gold" onclick="toggleCalc('retire')" type="button">Calculate</button>
+        <div class="calc-panel" id="panel-retire">
+          <label for="retire-expense">Current monthly expense (₹)</label>
+          <input id="retire-expense" type="number" value="40000">
+          <label for="retire-years">Years to retirement</label>
+          <input id="retire-years" type="number" value="25">
+          <label for="retire-return">Expected annual return (%)</label>
+          <input id="retire-return" type="number" value="12">
+          <button class="btn btn-navy-outline" style="margin-top:14px;background:#fff;" onclick="calcRetire()" type="button">Estimate</button>
+          <div class="calc-result" id="result-retire"></div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <h3>EMI Calculator</h3>
+        <p>Work out the monthly EMI on a loan.</p>
+        <button class="btn btn-gold" onclick="toggleCalc('emi')" type="button">Calculate</button>
+        <div class="calc-panel" id="panel-emi">
+          <label for="emi-amount">Loan amount (₹)</label>
+          <input id="emi-amount" type="number" value="1000000">
+          <label for="emi-rate">Interest rate (% p.a.)</label>
+          <input id="emi-rate" type="number" value="9">
+          <label for="emi-years">Loan tenure (years)</label>
+          <input id="emi-years" type="number" value="15">
+          <button class="btn btn-navy-outline" style="margin-top:14px;background:#fff;" onclick="calcEMI()" type="button">Estimate</button>
+          <div class="calc-result" id="result-emi"></div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Goal Calculator</h3>
+        <p>Find the monthly SIP required to reach a specific goal amount.</p>
+        <button class="btn btn-gold" onclick="toggleCalc('goal')" type="button">Calculate</button>
+        <div class="calc-panel" id="panel-goal">
+          <label for="goal-amount">Goal amount (₹)</label>
+          <input id="goal-amount" type="number" value="2000000">
+          <label for="goal-years">Years to goal</label>
+          <input id="goal-years" type="number" value="10">
+          <label for="goal-return">Expected annual return (%)</label>
+          <input id="goal-return" type="number" value="12">
+          <button class="btn btn-navy-outline" style="margin-top:14px;background:#fff;" onclick="calcGoal()" type="button">Estimate</button>
+          <div class="calc-result" id="result-goal"></div>
+        </div>
+      </div>
+
+    </div>
+    <p class="calc-note" style="text-align:center;margin-top:20px;">These are indicative estimates for planning discussions only, not investment advice or a guarantee of returns.</p>
+  </div>
+</section>
+
+<section id="insights" style="background:#fff;border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Knowledge Center</p>
+      <h2>Latest Insights</h2>
+      <p>Articles on planning and investing — coming soon as the site moves to its full blog.</p>
+    </div>
+    <div class="insights-grid">
+      <div class="insight-card">
+        <span class="insight-tag">Investing Basics</span>
+        <h3>Benefits of SIP Investing</h3>
+        <p>Why disciplined, regular investing tends to outperform trying to time the market.</p>
+        <span class="insight-soon">Full article coming soon</span>
+      </div>
+      <div class="insight-card">
+        <span class="insight-tag">Retirement</span>
+        <h3>Retirement Planning Guide</h3>
+        <p>A framework for figuring out how much you'll actually need, and how to get there.</p>
+        <span class="insight-soon">Full article coming soon</span>
+      </div>
+      <div class="insight-card">
+        <span class="insight-tag">Fundamentals</span>
+        <h3>How to Build an Emergency Fund</h3>
+        <p>What counts as "enough," and where to keep it so it's there when you need it.</p>
+        <span class="insight-soon">Full article coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>Ready to build your financial future?</h2>
+    <p>Book a free consultation today.</p>
+    <a class="btn" href="tel:+916264200751">Book Consultation</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">Contact Us</p>
+      <h2 style="margin:12px 0 28px;">Let's talk about your goals</h2>
+      <dl>
+        <div>
+          <dt>Name</dt>
+          <dd>Harsh Prajapati</dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd><a href="tel:+916264200751">+91 62642 00751</a></dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:hrashprajapati99@gmail.com">hrashprajapati99@gmail.com</a></dd>
+        </div>
+        <div>
+          <dt>Address</dt>
+          <dd>Shop No. 6, Second Floor, Above Anand Store,<br>Gadaji Complex, Gujarati Bazar,<br>Sagar, Madhya Pradesh</dd>
+        </div>
+        <div>
+          <dt>LinkedIn</dt>
+          <dd><a href="https://linkedin.com/in/hrash-prajapati-7262512b2" target="_blank" rel="noopener">linkedin.com/in/hrash-prajapati-7262512b2</a></dd>
+        </div>
+      </dl>
+      <div class="map-embed">
+        <iframe title="Office location map" loading="lazy" src="https://www.google.com/maps?q=Gadaji+Complex+Gujarati+Bazar+Sagar+Madhya+Pradesh&output=embed"></iframe>
+      </div>
+    </div>
+    <div>
+      <form class="consult" action="mailto:hrashprajapati99@gmail.com" method="POST" enctype="text/plain">
+        <div class="form-row">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="goal">What are you planning for?</label>
+          <select id="goal" name="goal">
+            <option>Retirement Planning</option>
+            <option>Child's Future Planning</option>
+            <option>Wealth Creation</option>
+            <option>Mutual Fund Distribution</option>
+            <option>Portfolio Review</option>
+            <option>Financial Planning</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="A little about what you'd like help with"></textarea>
+        </div>
+        <button class="btn btn-gold" type="submit" style="align-self:flex-start;">Send Message</button>
+        <p class="form-note">This form opens your email client to send the message. For a form that submits directly from the page, connect a service like Formspree or a backend endpoint.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" style="width:32px;height:32px;font-size:0.7rem;">PIFS</span>
+          <span style="font-family:'Fraunces',serif;color:#fff;">Prajapati Investment &amp;<br>Financial Services</span>
+        </div>
+        <p class="footer-tagline">Personalized financial planning and mutual fund distribution in Sagar, Madhya Pradesh.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#insights">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Mutual Funds</a></li>
+          <li><a href="#services">Financial Planning</a></li>
+          <li><a href="#services">Retirement Planning</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+916264200751">+91 62642 00751</a></li>
+          <li><a href="mailto:hrashprajapati99@gmail.com">hrashprajapati99@gmail.com</a></li>
+          <li><a href="https://linkedin.com/in/hrash-prajapati-7262512b2" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">
+      <strong>Mutual Fund investments are subject to market risks.</strong> Please read all scheme related documents carefully before investing. Past performance is not indicative of future returns. Harsh Prajapati is a registered financial advisor holding NISM Investment Adviser Level 1 &amp; 2 certifications, along with certifications in mutual fund distribution, portfolio management services, and commodity derivatives (registration details available on request). This website does not constitute investment advice; please consult before making any investment decision based on your individual financial situation. Calculator results are indicative estimates only.
+    </p>
+    <p class="copyright">© <span id="year"></span> Prajapati Investment &amp; Financial Services. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu toggle
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.querySelector('nav.links');
+  if(toggle){
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
+  // Calculator panel toggles
+  function toggleCalc(id){
+    const panel = document.getElementById('panel-' + id);
+    panel.classList.toggle('open');
+  }
+
+  function formatINR(num){
+    return '₹' + Math.round(num).toLocaleString('en-IN');
+  }
+
+  function calcSIP(){
+    const P = parseFloat(document.getElementById('sip-amount').value) || 0;
+    const annualReturn = parseFloat(document.getElementById('sip-return').value) || 0;
+    const years = parseFloat(document.getElementById('sip-years').value) || 0;
+    const r = annualReturn / 12 / 100;
+    const n = years * 12;
+    const fv = r === 0 ? P * n : P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+    const invested = P * n;
+    document.getElementById('result-sip').innerHTML =
+      'Estimated maturity value: ' + formatINR(fv) + '<br>Total invested: ' + formatINR(invested);
+  }
+
+  function calcRetire(){
+    const expense = parseFloat(document.getElementById('retire-expense').value) || 0;
+    const years = parseFloat(document.getElementById('retire-years').value) || 0;
+    const annualReturn = parseFloat(document.getElementById('retire-return').value) || 0;
+    // Approximate corpus needed: 25x annual expense at retirement (simplified, not inflation-adjusted)
+    const annualExpense = expense * 12;
+    const corpusNeeded = annualExpense * 25;
+    const r = annualReturn / 12 / 100;
+    const n = years * 12;
+    const requiredSIP = r === 0 ? corpusNeeded / n : corpusNeeded * r / (((Math.pow(1 + r, n) - 1)) * (1 + r));
+    document.getElementById('result-retire').innerHTML =
+      'Approx. corpus needed: ' + formatINR(corpusNeeded) + '<br>Monthly SIP required: ' + formatINR(requiredSIP);
+  }
+
+  function calcEMI(){
+    const P = parseFloat(document.getElementById('emi-amount').value) || 0;
+    const annualRate = parseFloat(document.getElementById('emi-rate').value) || 0;
+    const years = parseFloat(document.getElementById('emi-years').value) || 0;
+    const r = annualRate / 12 / 100;
+    const n = years * 12;
+    const emi = r === 0 ? P / n : P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+    const totalPay = emi * n;
+    document.getElementById('result-emi').innerHTML =
+      'Monthly EMI: ' + formatINR(emi) + '<br>Total payment: ' + formatINR(totalPay);
+  }
+
+  function calcGoal(){
+    const goalAmount = parseFloat(document.getElementById('goal-amount').value) || 0;
+    const years = parseFloat(document.getElementById('goal-years').value) || 0;
+    const annualReturn = parseFloat(document.getElementById('goal-return').value) || 0;
+    const r = annualReturn / 12 / 100;
+    const n = years * 12;
+    const requiredSIP = r === 0 ? goalAmount / n : goalAmount * r / (((Math.pow(1 + r, n) - 1)) * (1 + r));
+    document.getElementById('result-goal').innerHTML =
+      'Monthly SIP required: ' + formatINR(requiredSIP);
+  }
+</script>
+
+</body>
+</html>
